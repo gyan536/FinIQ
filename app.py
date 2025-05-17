@@ -1,3 +1,4 @@
+
 from flask import Flask, render_template, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
@@ -36,10 +37,10 @@ except Exception as e:
 try:
     # Financial sentiment (FinBERT)
     finbert_sentiment = pipeline("sentiment-analysis", model="yiyanghkust/finbert-tone")
-    # Language detection (for Hinglish/English)
-    lang_detector = pipeline("text-classification", model="papluca/xlm-roberta-base-language-detection")
-    # Financial QA (optional, for extracting answers from docs)
-    fin_qa = pipeline("question-answering", model="deepset/roberta-base-squad2")
+    # # Language detection (for Hinglish/English)
+    # lang_detector = pipeline("text-classification", model="papluca/xlm-roberta-base-language-detection")
+    # # Financial QA (optional, for extracting answers from docs)
+    # fin_qa = pipeline("question-answering", model="deepset/roberta-base-squad2")
     logger.info("Hugging Face models loaded successfully")
 except Exception as e:
     logger.error(f"Error loading Hugging Face models: {str(e)}")

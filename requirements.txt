@@ -10,3 +10,4 @@ requests
 sentencepiece
 flask-cors
 huggingface-hub
+pyngrok
